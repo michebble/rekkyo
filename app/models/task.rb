@@ -1,3 +1,5 @@
 class Task < ApplicationRecord
-  belongs_to :checklist
+  validates :action, presence: true
+
+  belongs_to :checklist, inverse_of: :tasks
 end
